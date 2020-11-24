@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window size="800, 600" mininfo="600, 400" caption="0,0,0,32" sizebox="4,4,4,4">
+  <Font id ="1" name="宋体" bold="true" size="22"/>
+  <Font id ="2" name="微软雅黑" bold="false" size="18"/>
+
+  <VerticalLayout>
+    <!-- 标题栏区 -->
+    <HorizontalLayout height="65" bkcolor="#FF006FBF">
+      <HorizontalLayout>
+        <Label font="1" text="流程运行" float="true" pos="110,21,0,0" textcolor="#FFFEFEFE"/>
+        <Button name="Back" float="true" pos="10,9,0,0" width="63" height="46.5" normalimage="file='ProcessRunning/On_Back_Nor.png'" hotimage="file='ProcessRunning/On_Back_Hot.png'" pushedimage="file='ProcessRunning/On_Back_Down.png' "/>
+        <Button font="2" text="暂停" name="Pause" float="true" pos="500,15,0,0" width="90" height="39.6" textcolor="#FFFEFEFE" normalimage="file='ProcessRunning/button_nor.png'" hotimage="file='ProcessRunning/button_focus.png'" pushedimage="file='ProcessRunning/button_down.png' "/>
+        <Button font="2" text="开始" name="StartAndStop" float="true" pos="600,15,0,0" width="90" height="39.6" textcolor="#FFFEFEFE" normalimage="file='ProcessRunning/button_nor.png'" hotimage="file='ProcessRunning/button_focus.png'" pushedimage="file='ProcessRunning/button_down.png' "/>
+      </HorizontalLayout>
+
+      <HorizontalLayout width="97">
+        <!-- 右边三个控件所占的宽度 -->
+        <Button name="minbtn" width="28" height="20" tooltip="最小化" normalimage="file='ProcessRunning/btn_mini_normal.png'" hotimage="file='ProcessRunning/btn_mini_highlight.png'" pushedimage="file='ProcessRunning/btn_mini_down.png' "/>
+        <Button name="maxbtn" width="28" height="20" tooltip="最大化" normalimage="file='ProcessRunning/btn_max_normal.png'" hotimage="file='ProcessRunning/btn_max_highlight.png'" pushedimage="file='ProcessRunning/btn_max_down.png' "/>
+        <Button name="restorebtn" width="28" height="20" tooltip="还原" visible="false" normalimage="file='ProcessRunning/btn_restore_normal.png'" hotimage="file='ProcessRunning/btn_restore_highlight.png'" pushedimage="file='ProcessRunning/btn_restore_down.png' "/>
+        <Button name="closebtn" width="39" height="20" tooltip="关闭" normalimage="file='ProcessRunning/btn_close_normal.png'" hotimage="file='ProcessRunning/btn_close_highlight.png'" pushedimage="file='ProcessRunning/btn_close_down.png' "/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+
+    <!-- 客户区 -->
+    <HorizontalLayout bkcolor="#FFFEFEFE" >
+
+      <HorizontalLayout bkcolor="#FFFFFFFF" bordercolor="#FF768D9B" bordersize="1">
+        <!--<Control width="5"/>-->
+        <HorizontalLayout bkcolor="#FFFFFFFF" bordercolor="#FF768D9B" bordersize="1">
+          <TabLayout name="switch">
+            <HorizontalLayout>
+              <Label name="Bk" float="true" pos="0,15,0,0" width="800" height="520" bkImage="ProcessRunning/MainBk.png"/>
+              <Text text="台面信息窗" pos="335, 180, 600, 300" relativepos="50,50,0,0"  float="true" font="1" />
+               </HorizontalLayout>
+            <HorizontalLayout>
+              <Label name="Bk" float="true" pos="0,15,0,0" width="800" height="520" bkImage="ProcessRunning/MainBk.png"/>
+              <Text text="步骤信息窗" pos="335, 180, 600, 300" relativepos="50,50,0,0"  float="true" font="1" /> 
+            </HorizontalLayout>
+            <HorizontalLayout>
+              <Label name="Bk" float="true" pos="0,15,0,0" width="800" height="520" bkImage="ProcessRunning/MainBk.png"/>
+              <Text text="样本信息窗" pos="335, 180, 600, 300" relativepos="50,50,0,0"  float="true" font="1" />
+              <Button font="2" text="导入" name="Import" float="true" pos="630,70,0,0" width="75" height="33" textcolor="#FFFEFEFE" normalimage="file='ProcessRunning/button_nor.png'" hotimage="file='ProcessRunning/button_focus.png'" pushedimage="file='ProcessRunning/button_down.png' "/>
+              <Button font="2" text="导出" name="Export" float="true" pos="720,70,0,0" width="75" height="33" textcolor="#FFFEFEFE" normalimage="file='ProcessRunning/button_nor.png'" hotimage="file='ProcessRunning/button_focus.png'" pushedimage="file='ProcessRunning/button_down.png' "/>
+            </HorizontalLayout>
+          </TabLayout>
+        </HorizontalLayout>
+        <!--<Control width="5"/>-->
+      </HorizontalLayout>
+
+      <HorizontalLayout float="true" pos="0,17,800,52">
+        <Option pos="2, 0, 266, 35" float="true" text="台面信息" name="PlateInfo" textcolor="#FF006FBF" font="2" normalimage="ProcessRunning/tabbar_normal.png" hotimage="ProcessRunning/tabbar_hover.png" pushedimage="ProcessRunning/tabbar_pushed.png" selectedimage="ProcessRunning/tabbar_pushed.png" group="contenttab"/>
+        <Option pos="268, 0, 532, 35" float="true" text="步骤信息" name="StepInfo" textcolor="#FF006FBF" font="2" normalimage="ProcessRunning/tabbar_normal.png" hotimage="ProcessRunning/tabbar_hover.png" pushedimage="ProcessRunning/tabbar_pushed.png" selectedimage="ProcessRunning/tabbar_pushed.png" group="contenttab"/>
+        <Option pos="534, 0, 798, 35" float="true" text="样本信息" name="SampleInfo" textcolor="#FF006FBF" font="2" normalimage="ProcessRunning/tabbar_normal.png" hotimage="ProcessRunning/tabbar_hover.png" pushedimage="ProcessRunning/tabbar_pushed.png" selectedimage="ProcessRunning/tabbar_pushed.png" group="contenttab"/>
+     </HorizontalLayout>
+      
+    </HorizontalLayout>
+
+  </VerticalLayout>
+
+</window>

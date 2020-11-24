@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window size="800, 600" mininfo="600, 400" caption="0,0,0,32" sizebox="4,4,4,4">
+  <Font id ="1" name="宋体" bold="true" size="22"/>
+  <Font id ="2" name="微软雅黑" bold="false" size="18"/>
+  <Font id ="3" name="微软雅黑" bold="false" size="14"/>
+
+  <VerticalLayout>
+    <!-- 标题栏区 -->
+    <HorizontalLayout height="65" bkcolor="#FF006FBF">
+      <HorizontalLayout>
+        <Label font="1" text="位置标定" float="true" pos="110,21,0,0" textcolor="#FFFEFEFE"/>
+        <Button name="Back" float="true" pos="10,9,0,0" width="63" height="46.5" normalimage="file='CalculatePosition/On_Back_Nor.png'" hotimage="file='CalculatePosition/On_Back_Hot.png'" pushedimage="file='CalculatePosition/On_Back_Down.png' "/>
+        <Button font="2" text="打开标定" name="OpenCalPosition" float="true" pos="500,15,0,0" width="90" height="39.6" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='CalculatePosition/button_focus.png'" pushedimage="file='CalculatePosition/button_down.png' "/>
+        <Button font="2" text="保存标定" name="SaveCalPosition" float="true" pos="600,15,0,0" width="90" height="39.6" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='CalculatePosition/button_focus.png'" pushedimage="file='CalculatePosition/button_down.png' "/>
+      </HorizontalLayout>
+
+      <HorizontalLayout width="97">
+        <!-- 右边三个控件所占的宽度 -->
+        <Button name="minbtn" width="28" height="20" tooltip="最小化" normalimage="file='CalculatePosition/btn_mini_normal.png'" hotimage="file='CalculatePosition/btn_mini_highlight.png'" pushedimage="file='CalculatePosition/btn_mini_down.png' "/>
+        <Button name="maxbtn" width="28" height="20" tooltip="最大化" normalimage="file='CalculatePosition/btn_max_normal.png'" hotimage="file='SystemSetting/btn_max_highlight.png'" pushedimage="file='CalculatePosition/btn_max_down.png' "/>
+        <Button name="restorebtn" width="28" height="20" tooltip="还原" visible="false" normalimage="file='CalculatePosition/btn_restore_normal.png'" hotimage="file='CalculatePosition/btn_restore_highlight.png'" pushedimage="file='CalculatePosition/btn_restore_down.png' "/>
+        <Button name="closebtn" width="39" height="20" tooltip="关闭" normalimage="file='CalculatePosition/btn_close_normal.png'" hotimage="file='CalculatePosition/btn_close_highlight.png'" pushedimage="file='CalculatePosition/btn_close_down.png' "/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+
+    <!-- 客户区 -->
+    <HorizontalLayout bkcolor="#FFFEFEFE" >
+      <Label name="Bk" float="true" pos="0,15,0,0" width="800" height="520" bkImage="CalculatePosition/MainBk.png"/>
+      <Label font="3" text="运动控制(mm)" float="true" pos="220,79,320,139" align="left"/>
+      <Label font="3" text="板位列表" float="true" pos="40,79,140,139" align="left"/>
+      <Label font="3" text="X步长：" float="true" pos="220,141,270,201" align="left"/>
+      <Label font="3" text="Y步长：" float="true" pos="220,203,270,263" align="left"/>
+      <Label font="3" text="Z步长：" float="true" pos="220,265,270,325" align="left"/>
+      <Label font="3" text="M步长：" float="true" pos="220,327,270,387" align="left"/>
+      <Label font="3" text="A步长：" float="true" pos="220,389,270,449" align="left"/>
+      <Edit font="3" name="XInput" text="X输入" float="true" pos="280,156,340,186" align="left" bkImage="CalculatePosition/MainBk.png" />
+      <Edit font="3" name="YInput" text="Y输入" float="true" pos="280,218,340,248" align="left" bkImage="CalculatePosition/MainBk.png" />
+      <Edit font="3" name="ZInput" text="Z输入" float="true" pos="280,280,340,310" align="left" bkImage="CalculatePosition/MainBk.png" />
+      <Edit font="3" name="MInput" text="M输入" float="true" pos="280,342,340,372" align="left" bkImage="CalculatePosition/MainBk.png" />
+      <Edit font="3" name="AInput" text="A输入" float="true" pos="280,404,340,434" align="left" bkImage="CalculatePosition/MainBk.png" />
+      <Button font="3" text="咽拭子管板位" name="XDirection" float="true" pos="40,156,140,186" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="拧盖板位" name="YDirection" float="true" pos="40,218,140,248" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Tips板位" name="ZDirection" float="true" pos="40,280,140,310" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="样本管板位" name="MDirection" float="true" pos="40,342,140,372" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="X正向" name="XDirection" float="true" pos="360,156,460,186" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Y正向" name="YDirection" float="true" pos="360,218,460,248" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Z正向" name="ZDirection" float="true" pos="360,280,460,310" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="M正向" name="MDirection" float="true" pos="360,342,460,372" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="A正向" name="ADirection" float="true" pos="360,404,460,434" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="X反向" name="XReverse" float="true" pos="480,156,580,186" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Y反向" name="YReverse" float="true" pos="480,218,580,248" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Z反向" name="ZReverse" float="true" pos="480,280,580,310" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="M反向" name="MReverse" float="true" pos="480,342,580,372" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="A反向" name="AReverse" float="true" pos="480,404,580,434" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="X到标定位置" name="XToInitial" float="true" pos="600,156,700,186" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Y到标定位置" name="YToInitial" float="true" pos="600,218,700,248" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Z到标定位置" name="ZToInitial" float="true" pos="600,280,700,310" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="M到标定位置" name="MToInitial" float="true" pos="600,342,700,372" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="A到标定位置" name="AToInitial" float="true" pos="600,404,700,434" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="X复位" name="XReset" float="true" pos="210,466,280,496" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Y复位" name="YReset" float="true" pos="305,466,375,496" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Z复位" name="ZReset" float="true" pos="390,466,460,496" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="M复位" name="MReset" float="true" pos="475,466,545,496" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="A复位" name="AReset" float="true" pos="560,466,630,496" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="全部复位" name="AllReset" float="true" pos="645,466,715,496" textcolor="#FFFEFEFE" normalimage="file='CalculatePosition/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+
+    </HorizontalLayout>
+
+  </VerticalLayout>
+
+</window>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window size="800, 600" mininfo="600, 400" caption="0,0,0,32" sizebox="4,4,4,4">
+  <Font id ="1" name="宋体" bold="true" size="22"/>
+  <Font id ="2" name="微软雅黑" bold="false" size="18"/>
+
+  <VerticalLayout>
+    <!-- 标题栏区 -->
+    <HorizontalLayout height="65" bkcolor="#FF006FBF">
+      <HorizontalLayout>
+        <Label font="1" text="流程编辑" float="true" pos="110,21,0,0" textcolor="#FFFEFEFE"/>
+        <Button name="Back" float="true" pos="10,9,0,0" width="63" height="46.5" normalimage="file='StepEdit/On_Back_Nor.png'" hotimage="file='StepEdit/On_Back_Hot.png'" pushedimage="file='StepEdit/On_Back_Down.png' "/>
+        <Button font="2" text="流程导入" name="ProcessImport" float="true" pos="240,15,0,0" width="82.5" height="36.3" textcolor="#FFFEFEFE" normalimage="file='StepEdit/button_nor.png'" hotimage="file='StepEdit/button_focus.png'" pushedimage="file='StepEdit/button_down.png' "/>
+        <Button font="2" text="流程保存" name="ProcessSave" float="true" pos="330,15,0,0" width="82.5" height="36.3" textcolor="#FFFEFEFE" normalimage="file='StepEdit/button_nor.png'" hotimage="file='StepEdit/button_focus.png'" pushedimage="file='StepEdit/button_down.png' "/>
+        <Button font="2" text="删除步骤" name="StepDelete" float="true" pos="420,15,0,0" width="82.5" height="36.3" textcolor="#FFFEFEFE" normalimage="file='StepEdit/button_nor.png'" hotimage="file='StepEdit/button_focus.png'" pushedimage="file='StepEdit/button_down.png' "/>
+        <Button font="2" text="增加步骤" name="StepAdd" float="true" pos="510,15,0,0" width="82.5" height="36.3" textcolor="#FFFEFEFE" normalimage="file='StepEdit/button_nor.png'" hotimage="file='StepEdit/button_focus.png'" pushedimage="file='StepEdit/button_down.png' "/>
+        <Button font="2" text="流程运行" name="ProcessRun" float="true" pos="600,15,0,0" width="82.5" height="36.3" textcolor="#FFFEFEFE" normalimage="file='StepEdit/button_nor.png'" hotimage="file='StepEdit/button_focus.png'" pushedimage="file='StepEdit/button_down.png' "/>
+      </HorizontalLayout>
+
+      <HorizontalLayout width="97">
+        <!-- 右边三个控件所占的宽度 -->
+        <Button name="minbtn" width="28" height="20" tooltip="最小化" normalimage="file='StepEdit/btn_mini_normal.png'" hotimage="file='StepEdit/btn_mini_highlight.png'" pushedimage="file='StepEdit/btn_mini_down.png' "/>
+        <Button name="maxbtn" width="28" height="20" tooltip="最大化" normalimage="file='StepEdit/btn_max_normal.png'" hotimage="file='StepEdit/btn_max_highlight.png'" pushedimage="file='StepEdit/btn_max_down.png' "/>
+        <Button name="restorebtn" width="28" height="20" tooltip="还原" visible="false" normalimage="file='StepEdit/btn_restore_normal.png'" hotimage="file='StepEdit/btn_restore_highlight.png'" pushedimage="file='StepEdit/btn_restore_down.png' "/>
+        <Button name="closebtn" width="39" height="20" tooltip="关闭" normalimage="file='StepEdit/btn_close_normal.png'" hotimage="file='StepEdit/btn_close_highlight.png'" pushedimage="file='StepEdit/btn_close_down.png' "/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+
+    <!-- 客户区 -->
+    <HorizontalLayout height="50" bkcolor="#FFFFFFFF">
+      <Label font="2" text="文件名：" float="true" pos="10,10,80,40" textcolor="#FF006FBF"/>
+      <Label font="2" float="true" pos="90,10,190,40" align="center" textcolor="#FF006FBF" bkimage="file='StepEdit/EmptyBox.png'"/>
+    </HorizontalLayout>
+    
+    <HorizontalLayout bkcolor="#FFFEFEFE">
+
+      <HorizontalLayout height="400" width="97">
+        <!--树结构布局-->
+        <TreeView name="TreeList" itemfont="黑体" itemtextcolor="#FF006FBF" itemhottextcolor="#FFC8C6CB" selitemtextcolor="FFC8C6CB" itemhotbkcolor="#FF1B1B1B" itemselectedbkcolor="#FF151C2C"	visiblecheckbtn="false">
+          <TreeNode name="StartNode" text="开始" height="33" />
+          <TreeNode name="TestTubeNode" text="检管" height="33" >
+            <TreeNode text="步骤1" height="22"/>
+            <TreeNode text="步骤2" height="22"/>
+          </TreeNode>
+          <TreeNode name="OpenStepNode" text="开盖步骤" height="33" >
+            <TreeNode text="取试管" height="22"/>
+            <TreeNode text="放试管" height="22"/>
+            <TreeNode text="拧试管" height="22"/>
+          </TreeNode>
+          <TreeNode name="EndProcessNode" text="流程结束" height="33"/>
+        </TreeView>
+      </HorizontalLayout>
+
+      <HorizontalLayout>
+        <!-- 右边三个控件所占的宽度 -->
+
+        <Container name="Container1" height="350">
+
+          <Label font="2" text="步骤名称：" float="true" pos="100,60,200,90" textcolor="#FF006FBF"/>
+          <Label font="2" text="开盖步骤" float="true" pos="260,60,360,90" align="center" textcolor="#FF006FBF" bkimage="file='StepEdit/EmptyBox.png'"/>
+          <Label font="2" text="样品管类型：" float="true" pos="100,110,200,140" textcolor="#FF006FBF"/>
+          <Label font="2" text="台面类型：" float="true" pos="400,110,500,140" textcolor="#FF006FBF"/>
+          <Label font="2" text="起始板位：" float="true" pos="100,160,200,190" textcolor="#FF006FBF"/>
+          <Label font="2" float="true" pos="260,160,360,190" align="center" textcolor="#FF006FBF" bkimage="file='StepEdit/EmptyBox.png'"/>
+          <Label font="2" text="结束板位：" float="true" pos="100,210,200,240" textcolor="#FF006FBF"/>
+          <Label font="2" float="true" pos="260,210,360,240" align="center" textcolor="#FF006FBF" bkimage="file='StepEdit/EmptyBox.png'"/>
+          <Label font="2" text="起始孔：" float="true" pos="100,260,200,290" textcolor="#FF006FBF"/>
+          <Label font="2" float="true" pos="260,260,360,290" align="center" textcolor="#FF006FBF" bkimage="file='StepEdit/EmptyBox.png'"/>
+          <Label font="2" text="取管Z轴下降深度：" float="true" pos="100,310,250,340" textcolor="#FF006FBF"/>
+          <Label font="2" float="true" pos="260,310,360,340" align="center" textcolor="#FF006FBF" bkimage="file='StepEdit/EmptyBox.png'"/>
+
+          <Combo name="SampleTubeType" float="true" pos="260,114,340,139" align="center" normalimage="file='sysbtn/Combo_nor.png'" hotimage="file='sysbtn/Combo_over.png' " pushedimage="file='sysbtn/Combo_push.png'">
+            <ListLabelElement text="5混管" selected="true" />
+            <ListLabelElement text="10混管" />
+          </Combo>
+          <Combo name="PlateType" float="true" pos="500,114,580,139" align="center" normalimage="file='sysbtn/Combo_nor.png'" hotimage="file='sysbtn/Combo_over.png' " pushedimage="file='sysbtn/Combo_push.png'">
+            <ListLabelElement text="类型1" selected="true" />
+            <ListLabelElement text="类型2" />
+          </Combo>
+        </Container>
+      
+      </HorizontalLayout>
+
+    </HorizontalLayout>
+
+  </VerticalLayout>
+
+</window>

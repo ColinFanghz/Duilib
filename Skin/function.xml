@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window size="800, 600" mininfo="600, 400" caption="0,0,0,32" sizebox="4,4,4,4">
+
+
+  <!--<ControlTwo visible="false"/>-->
+  <Font id ="1" name="宋体" bold="true" size="22"/>
+  <Font id ="2" name="黑体" bold="false" size="20"/>
+  <Font id ="3" name="微软雅黑" bold="false" size="30"/>
+
+  <!--<ControlOne />-->
+  
+  <VerticalLayout>
+    <!-- 标题栏区 -->
+    <HorizontalLayout height="65" bkcolor="#FF006FBF">
+      <HorizontalLayout>
+        <Label font="1" float="true" pos="110,100,0,0" width="100" height="32" text="高通量核酸提取系统" align="left" textcolor="#FFFEFEFE"/>
+        <Text text="高通量核酸提取系统" pos="20, 20, 300, 50"  float="true" font="1" textcolor="#FFFEFEFE" />
+      </HorizontalLayout>
+
+      <HorizontalLayout width="97">
+        <!-- 右边三个控件所占的宽度 -->
+        <Button name="minbtn" width="28" height="20" tooltip="最小化" normalimage="file='function/btn_mini_normal.png'" hotimage="file='function/btn_mini_highlight.png'" pushedimage="file='function/btn_mini_down.png' "/>
+        <Button name="maxbtn" width="28" height="20" tooltip="最大化" normalimage="file='function/btn_max_normal.png'" hotimage="file='function/btn_max_highlight.png'" pushedimage="file='function/btn_max_down.png' "/>
+        <Button name="restorebtn" width="28" height="20" tooltip="还原" visible="false" normalimage="file='function/btn_restore_normal.png'" hotimage="file='function/btn_restore_highlight.png'" pushedimage="file='function/btn_restore_down.png' "/>
+        <Button name="closebtn" width="39" height="20" tooltip="关闭" normalimage="file='function/btn_close_normal.png'" hotimage="file='function/btn_close_highlight.png'" pushedimage="file='function/btn_close_down.png' "/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+
+    <!-- 客户区 -->
+    <HorizontalLayout bkcolor="#FFFEFEFE">
+      <Button font="3" text="流程编辑" name="ProcessEdit" textcolor="#FF006FBF" float="true" pos="65,130,0,0" width="180" height="75" normalimage="file='function/button_nor.png'" hotimage="file='function/button_focus.png'" pushedimage="file='function/button_down.png' "/>
+      <Button font="3" text="流程运行" name="ProcessRunning" textcolor="#FF006FBF" float="true" pos="310,130,0,0" width="180" height="75" normalimage="file='function/button_nor.png'" hotimage="file='function/button_focus.png'" pushedimage="file='function/button_down.png' "/>
+      <Button font="3" text="紫外灯" name="UVLamp" textcolor="#FF006FBF" float="true" pos="555,130,0,0" width="180" height="75" normalimage="file='function/button_nor.png'" hotimage="file='function/button_focus.png'" pushedimage="file='function/button_down.png' "/>
+      <Button font="3" text="位置标定" name="PositionCal" textcolor="#FF006FBF" float="true" pos="65,300,0,0" width="180" height="75" normalimage="file='function/button_nor.png'" hotimage="file='function/button_focus.png'" pushedimage="file='function/button_down.png' "/>
+      <Button font="3" text="系统设置" name="SystemSetting" textcolor="#FF006FBF" float="true" pos="310,300,0,0" width="180" height="75" normalimage="file='function/button_nor.png'" hotimage="file='function/button_focus.png'" pushedimage="file='function/button_down.png' "/>
+      <Button font="3" text="退出" name="Exit" textcolor="#FF006FBF" float="true" pos="555,300,0,0" width="180" height="75" normalimage="file='function/button_nor.png'" hotimage="file='function/button_focus.png'" pushedimage="file='function/button_down.png' "/>
+    </HorizontalLayout>
+
+  </VerticalLayout>
+
+
+</window>

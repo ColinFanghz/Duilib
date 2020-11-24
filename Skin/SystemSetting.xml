@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window size="800, 600" mininfo="600, 400" caption="0,0,0,32" sizebox="4,4,4,4">
+  <Font id ="1" name="宋体" bold="true" size="22"/>
+  <Font id ="2" name="微软雅黑" bold="false" size="18"/>
+  <Font id ="3" name="微软雅黑" bold="false" size="14"/>
+
+  <VerticalLayout>
+    <!-- 标题栏区 -->
+    <HorizontalLayout height="65" bkcolor="#FF006FBF">
+      <HorizontalLayout>
+        <Label font="1" text="系统设置" float="true" pos="110,21,0,0" textcolor="#FFFEFEFE"/>
+        <Button name="Back" float="true" pos="10,9,0,0" width="63" height="46.5" normalimage="file='SystemSetting/On_Back_Nor.png'" hotimage="file='SystemSetting/On_Back_Hot.png'" pushedimage="file='SystemSetting/On_Back_Down.png' "/>
+        <Button font="2" text="打开文件" name="OpenFile" float="true" pos="500,15,0,0" width="90" height="39.6" textcolor="#FFFEFEFE" normalimage="file='SystemSetting/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+        <Button font="2" text="保存文件" name="SaveFile" float="true" pos="600,15,0,0" width="90" height="39.6" textcolor="#FFFEFEFE" normalimage="file='SystemSetting/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      </HorizontalLayout>
+
+      <HorizontalLayout width="97">
+        <!-- 右边三个控件所占的宽度 -->
+        <Button name="minbtn" width="28" height="20" tooltip="最小化" normalimage="file='SystemSetting/btn_mini_normal.png'" hotimage="file='SystemSetting/btn_mini_highlight.png'" pushedimage="file='SystemSetting/btn_mini_down.png' "/>
+        <Button name="maxbtn" width="28" height="20" tooltip="最大化" normalimage="file='SystemSetting/btn_max_normal.png'" hotimage="file='SystemSetting/btn_max_highlight.png'" pushedimage="file='SystemSetting/btn_max_down.png' "/>
+        <Button name="restorebtn" width="28" height="20" tooltip="还原" visible="false" normalimage="file='SystemSetting/btn_restore_normal.png'" hotimage="file='SystemSetting/btn_restore_highlight.png'" pushedimage="file='SystemSetting/btn_restore_down.png' "/>
+        <Button name="closebtn" width="39" height="20" tooltip="关闭" normalimage="file='SystemSetting/btn_close_normal.png'" hotimage="file='SystemSetting/btn_close_highlight.png'" pushedimage="file='SystemSetting/btn_close_down.png' "/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+
+    <!-- 客户区 -->
+    <HorizontalLayout bkcolor="#FFFEFEFE" >
+      <Label name="Bk" float="true" pos="0,15,0,0" width="800" height="520" bkImage="SystemSetting/MainBk.png"/>
+      <Label font="3" text="系统文件路径" float="true" pos="2,17,220,77" align="center"/>
+      <Label font="3" text="流程文件路径" float="true" pos="2,79,220,139" align="center"/>
+      <Label font="3" text="标定文件路径" float="true" pos="2,141,220,201" align="center"/>
+      <Label font="3" text="条码扫描器设置" float="true" pos="2,265,220,325" align="center"/>
+      <Label font="3" text="样本管设置" float="true" pos="2,327,220,387" align="center"/>
+      <Label font="3" text="台面设置" float="true" pos="2,389,220,449" align="center"/>
+      <Button font="3" text="System file path" name="SystemFilePath" float="true" pos="222,17,798,77" textcolor="#FFFEFEFE" normalimage="file='SystemSetting/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Process file path" name="ProcessFilePath" float="true" pos="222,79,798,139" textcolor="#FFFEFEFE" normalimage="file='SystemSetting/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Calculate position file path" name="CalculatePositionFilePath" float="true" pos="222,141,798,201" textcolor="#FFFEFEFE" normalimage="file='SystemSetting/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Scanner setting" name="ScannerSetting" float="true" pos="222,265,798,325" textcolor="#FFFEFEFE" normalimage="file='SystemSetting/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Sample tube setting" name="SampleTubeSetting" float="true" pos="222,327,798,387" textcolor="#FFFEFEFE" normalimage="file='SystemSetting/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+      <Button font="3" text="Template setting" name="TemplateSetting" float="true" pos="222,389,798,449" textcolor="#FFFEFEFE" normalimage="file='SystemSetting/button_nor.png'" hotimage="file='SystemSetting/button_focus.png'" pushedimage="file='SystemSetting/button_down.png' "/>
+
+    </HorizontalLayout>
+
+  </VerticalLayout>
+
+</window>
